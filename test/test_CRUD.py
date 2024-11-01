@@ -13,14 +13,14 @@ from CRUD.CRUDutilidades import CRUD
 class TestCRUD(unittest.TestCase):
     def setUp(self):
         self.crud = CRUD() 
-        self.cliente_1 = cliente("Juan Perez", "12345678")
-        self.cliente_2 = cliente("Maria Lopez", "87654321")
+        self.cliente_1 = cliente("Emmanuel Henao", "12345678")
+        self.cliente_2 = cliente("Isabella Henao", "87654321")
 
         self.factura_1 = factura(self.cliente_1)
         self.factura_2 = factura(self.cliente_2)
         
-        self.pc_plaga = producto_plaga("Plaga X", "ICA124", 8, 20000, 20)
-        self.pc_fertilizante = producto_fertilizante("UREA", "ICA7028", 15, 60000, 10)
+        self.pc_plaga = producto_plaga("Plaga", "ICA124", 8, 20000, 20)
+        self.pc_fertilizante = producto_fertilizante("Fertilizante", "ICA7028", 15, 120000, 10)
        
         self.antibiotico_1 = antibiotico("anti_1", 10, "bovino", 120000)
         self.antibiotico_2 = antibiotico("anti_2", 8, "caprino", 100000)
@@ -34,7 +34,7 @@ class TestCRUD(unittest.TestCase):
         self.crud.agregar_cliente(self.cliente_1)
         cliente_encontrado = self.crud.buscar_por_cedula("12345678")
         self.assertIsNotNone(cliente_encontrado, "El cliente no fue encontrado.")
-        self.assertEqual(cliente_encontrado.nombreCliente, "Juan Perez", "El nombre del cliente no coincide.")
+        self.assertEqual(cliente_encontrado.nombreCliente, "Emmanuel", "El nombre del cliente no coincide.")
 
     def test_eliminar_cliente(self):
         self.crud.agregar_cliente(self.cliente_1)
