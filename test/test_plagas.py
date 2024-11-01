@@ -8,10 +8,10 @@ from modelo.producto_plagas import ControlPlagas
 class TestPlaga(unittest.TestCase):
 
     def setUp(self):
-        self.plaga = ControlPlagas("PlagaStop", "ICA789", 15, 80000, 7)
+        self.plaga = ControlPlagas("insecticida", "ICA789", 15, 80000, 7)
 
     def test_creacion_correcta(self):
-        self.assertEqual(self.plaga.nombreProducto, "PlagaStop")
+        self.assertEqual(self.plaga.nombreProducto, "insecticida")
         self.assertEqual(self.plaga.registroIca, "ICA789")
         self.assertEqual(self.plaga.frecuenciaAplicacion, 15)
         self.assertEqual(self.plaga.precioProducto, 80000)
