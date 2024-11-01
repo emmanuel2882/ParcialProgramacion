@@ -4,10 +4,10 @@ from modelo.antibioticos import Antibiotico
 class TestAntibiotico(unittest.TestCase):
 
     def setUp(self):
-        self.antibiotico = Antibiotico("Penicilina", 500, "bovinos", 150000)
+        self.antibiotico = Antibiotico("fluconazol", 500, "bovinos", 150000)
 
     def test_creacion_correcta(self):
-        self.assertEqual(self.antibiotico.nombreAntibiotico, "Penicilina")
+        self.assertEqual(self.antibiotico.nombreAntibiotico, "fluconazol")
         self.assertEqual(self.antibiotico.dosis, 500)
         self.assertEqual(self.antibiotico.tipoAnimal, "bovinos")
         self.assertEqual(self.antibiotico.precioAntibiotico, 150000)
@@ -19,7 +19,7 @@ class TestAntibiotico(unittest.TestCase):
 
     def test_nombre_invalido_caracteres(self):
         with self.assertRaises(ValueError) as context:
-            self.antibiotico.nombreAntibiotico = "Penicilin@123"
+            self.antibiotico.nombreAntibiotico = "fluconazol"
         self.assertEqual(str(context.exception), "Error: el nombre del antibiótico debe estar compuesto solo de espacios y letras.")
 
     def test_dosis_invalida(self):
