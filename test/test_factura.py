@@ -12,9 +12,9 @@ from modelo.cliente import Cliente as cliente
 
 class TestFactura(unittest.TestCase):
     def setUp(self):
-        self.cliente = cliente("Juan Perez", "12345678")
-        self.pc_plaga = producto_plaga("Plaga X", "ICA124", 8, 20000, 20)
-        self.pc_fertilizante = producto_fertilizante("UREA", "ICA7028", 15, 60000, 10)
+        self.cliente = cliente("emmanuel", "12345678")
+        self.pc_plaga = producto_plaga("Plaga", "ICA124", 8, 20000, 20)
+        self.pc_fertilizante = producto_fertilizante("fertilizante", "ICA7028", 15, 60000, 10)
         self.fact = factura(self.cliente)
 
     def test_vende_varios_producto_control(self):
@@ -35,7 +35,7 @@ class TestFactura(unittest.TestCase):
         ant_1 = antibiotico("anti_1", 10, "bovino", 120000)
         ant_2 = antibiotico("anti_2", 8, "caprino", 100000)
         pc_plaga = producto_plaga("Plaga X", "ICA124", 8, 20000, 20)
-        pc_fertilizante = producto_fertilizante("UREA", "ICA7028", 15, 60000, 10)
+        pc_fertilizante = producto_fertilizante("ferilizante", "ICA7028", 15, 60000, 10)
 
         self.fact.asociar_producto_control(pc_plaga)
         self.fact.asociar_producto_control(pc_fertilizante)
