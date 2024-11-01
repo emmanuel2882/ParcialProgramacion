@@ -8,11 +8,11 @@ from modelo.controlFertilizantes import ControlFertilizantes
 class TestFertilizante(unittest.TestCase):
 
     def setUp(self):
-        self.fertilizante = ControlFertilizantes("FertiGrow", "ICA123", 30, 100000, "2024-10-01")
+        self.fertilizante = ControlFertilizantes("Fertilizante", "ICA789", 30, 100000, "2024-10-01")
 
     def test_creacion_correcta(self):
-        self.assertEqual(self.fertilizante.nombreProducto, "FertiGrow")
-        self.assertEqual(self.fertilizante.registroIca, "ICA123")
+        self.assertEqual(self.fertilizante.nombreProducto, "Fertilizante")
+        self.assertEqual(self.fertilizante.registroIca, "ICA885")
         self.assertEqual(self.fertilizante.frecuenciaAplicacion, 30)
         self.assertEqual(self.fertilizante.precioProducto, 100000)
         self.assertEqual(self.fertilizante.fechaUltimaAplicacion, "2024-10-01")
