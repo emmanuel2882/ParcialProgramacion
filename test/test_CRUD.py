@@ -22,8 +22,8 @@ class TestCRUD(unittest.TestCase):
         self.pc_plaga = producto_plaga("Plaga", "ICA124", 8, 20000, 20)
         self.pc_fertilizante = producto_fertilizante("Fertilizante", "ICA7028", 15, 120000, 10)
        
-        self.antibiotico_1 = antibiotico("anti_1", 10, "bovino", 120000)
-        self.antibiotico_2 = antibiotico("anti_2", 8, "caprino", 100000)
+        self.antibiotico_1 = antibiotico("antibioticonumero1", 10, "bovino", 120000)
+        self.antibiotico_2 = antibiotico("antibioticonumero2", 8, "caprino", 100000)
 
     def test_agregar_cliente(self):
         self.crud.agregar_cliente(self.cliente_1)
